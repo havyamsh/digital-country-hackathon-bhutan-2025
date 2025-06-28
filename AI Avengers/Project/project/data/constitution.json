@@ -1,0 +1,35 @@
+{
+  "fundamental_rights": [
+    "Right to life, liberty and security of person",
+    "Right to freedom of speech, opinion and expression",
+    "Right to information",
+    "Right to vote",
+    "Right to freedom of religion",
+    "Right to freedom of movement and residence",
+    "Right to property"
+  ],
+  "democratic_principles": [
+    "Constitutional monarchy",
+    "Separation of powers",
+    "Parliamentary democracy",
+    "Independent judiciary",
+    "Rule of law",
+    "Gross National Happiness"
+  ],
+  "institutions": {
+    "executive": [
+      "King",
+      "Prime Minister",
+      "Council of Ministers"
+    ],
+    "legislature": [
+      "National Assembly",
+      "National Council"
+    ],
+    "judiciary": [
+      "Supreme Court",
+      "High Court",
+      "District Courts"
+    ]
+  }
+}

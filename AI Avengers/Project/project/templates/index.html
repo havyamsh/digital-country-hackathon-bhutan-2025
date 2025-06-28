@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>འབྲུག་གཞུང་གི་ཡོན་ཏན་འདེབས་སྦྱོར། - Sovereign AI Bhutan</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🏔️%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">🏔️</div>
+                    <div class="logo-text">
+                        <h1>Sovereign AI</h1>
+                        <p>འབྲུག་གཞུང་གི་ཡོན་ཏན་འདེབས་སྦྱོར།</p>
+                    </div>
+                </div>
+                <div class="header-controls">
+                    <div class="language-selector">
+                        <button class="language-btn active" data-lang="en">English</button>
+                        <button class="language-btn" data-lang="dz">རྫོང་ཁ</button>
+                    </div>
+                    <div class="status-indicator">
+                        <div class="status-dot" id="statusDot"></div>
+                        <span id="statusText">Connecting...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="hero-content">
+                    <h2 class="hero-title" data-en="Welcome to Bhutan's AI Assistant" data-dz="འབྲུག་གི་ཡོན་ཏན་འདེབས་སྦྱོར་ལུ་དགའ་བསུ།">Welcome to Bhutan's AI Assistant</h2>
+                    <p class="hero-subtitle" data-en="Get help with government services, laws, tourism, and more in your preferred language" data-dz="གཞུང་འབྲེལ་ཞབས་ཏོག་དང་ཁྲིམས་ལུགས། འགྲུལ་བསྐྱོད་སོགས་ལུ་རོགས་པ་ཐོབ།">Get help with government services, laws, tourism, and more in your preferred language</p>
+                </div>
+                <div class="hero-image">
+                    <div class="ai-visualization">
+                        <div class="orbit orbit-1"></div>
+                        <div class="orbit orbit-2"></div>
+                        <div class="orbit orbit-3"></div>
+                        <div class="ai-core">AI</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Agent Selection -->
+            <section class="agents-section">
+                <h3 class="section-title" data-en="Choose Your Assistant" data-dz="རོགས་རམ་འདེམས་རོགས།">Choose Your Assistant</h3>
+                <div class="agents-grid" id="agentsGrid">
+                    <!-- Agents will be populated by JavaScript -->
+                </div>
+            </section>
+
+            <!-- Chat Interface -->
+            <section class="chat-section">
+                <div class="chat-container">
+                    <div class="chat-header">
+                        <div class="chat-title">
+                            <span id="currentAgentName" data-en="General Assistant" data-dz="སྤྱི་སྤྱོད་རོགས་རམ།">General Assistant</span>
+                            <span class="chat-status" id="chatStatus">Ready</span>
+                        </div>
+                        <button class="clear-chat-btn" id="clearChatBtn" title="Clear conversation">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M3 6h18"></path>
+                                <path d="M8 6V4a2 2 0 012-2h4a2 2 0 012 2v2"></path>
+                                <path d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    
+                    <div class="chat-messages" id="chatMessages">
+                        <div class="welcome-message">
+                            <div class="message assistant">
+                                <div class="message-content">
+                                    <p data-en="Hello! I'm here to help you with questions about Bhutan's government services, laws, culture, and tourism. How can I assist you today?" data-dz="བཀྲ་ཤིས་བདེ་ལེགས། ང་རང་འདིར་འབྲུག་གི་གཞུང་འབྲེལ་ཞབས་ཏོག་དང་ཁྲིམས་ལུགས། རིག་གཞུང་། འགྲུལ་བསྐྱོད་སོགས་ཀྱི་སྐོར་ལུ་རོགས་པ་བྱེད་ནི་ཨིན། ད་རེས་ག་ཅི་ལུ་རོགས་པ་དགོ་སེ?">Hello! I'm here to help you with questions about Bhutan's government services, laws, culture, and tourism. How can I assist you today?</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="chat-input-container">
+                        <div class="input-wrapper">
+                            <textarea 
+                                id="chatInput" 
+                                placeholder="Type your question here... | འདིར་ཁྱེད་རང་གི་དྲི་བ་བིས་རོགས།"
+                                rows="1"
+                            ></textarea>
+                            <button class="send-btn" id="sendBtn" disabled>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 2L11 13"></path>
+                                    <path d="M22 2L15 22L11 13L2 9L22 2Z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="input-suggestions" id="inputSuggestions">
+                            <!-- Suggestions will be populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4 data-en="About Sovereign AI" data-dz="སྐུ་དམངས་ཡོན་ཏན་འདེབས་སྦྱོར།">About Sovereign AI</h4>
+                    <p data-en="An AI assistant built for Bhutan, by Bhutan, preserving our culture and values while embracing digital transformation." data-dz="འབྲུག་གི་རིག་གཞུང་དང་ལུགས་སྲོལ་སྲུངས་ཞིང་འཕེལ་རིམ་སྤེལ་བའི་ཡོན་ཏན་འདེབས་སྦྱོར།">An AI assistant built for Bhutan, by Bhutan, preserving our culture and values while embracing digital transformation.</p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-en="Quick Links" data-dz="མྱུར་ལམ།">Quick Links</h4>
+                    <ul>
+                        <li><a href="#" data-en="Government Portal" data-dz="གཞུང་འབྲེལ་དྲ་རྒྱ།">Government Portal</a></li>
+                        <li><a href="#" data-en="Tourism Board" data-dz="འགྲུལ་བསྐྱོད་ལྷན་ཚོགས།">Tourism Board</a></li>
+                        <li><a href="#" data-en="Legal Resources" data-dz="ཁྲིམས་ལུགས་ཐོ་གཞུང་།">Legal Resources</a></li>
+                        <li><a href="#" data-en="Cultural Heritage" data-dz="རིག་གཞུང་ནོར་བུ།">Cultural Heritage</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 data-en="Contact" data-dz="འབྲེལ་བ།">Contact</h4>
+                    <p data-en="For technical support or feedback" data-dz="ཞབས་འདེགས་སམ་དགོངས་འཆར་གྱི་དོན་ལུ།">For technical support or feedback</p>
+                    <p>support@sovereign.ai.bt</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Royal Government of Bhutan. Built with ❤️ for Gross National Happiness.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner">
+            <div class="spinner"></div>
+            <p data-en="Processing your request..." data-dz="ཁྱེད་རང་གི་གསུངས་འདེབས་བསྡོམ་དོ།">Processing your request...</p>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

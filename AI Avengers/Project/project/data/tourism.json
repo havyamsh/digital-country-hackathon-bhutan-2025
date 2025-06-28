@@ -1,0 +1,49 @@
+{
+  "attractions": {
+    "thimphu": [
+      "Tashichho Dzong",
+      "Memorial Chorten",
+      "Buddha Dordenma",
+      "Weekend Market",
+      "National Library"
+    ],
+    "paro": [
+      "Tiger's Nest Monastery",
+      "Paro Dzong",
+      "National Museum",
+      "Drukgyel Dzong",
+      "Kyichu Lhakhang"
+    ],
+    "punakha": [
+      "Punakha Dzong",
+      "Chimi Lhakhang",
+      "Suspension Bridge",
+      "Sangchhen Dorji Lhuendrup Nunnery"
+    ]
+  },
+  "festivals": [
+    {
+      "name": "Thimphu Tshechu",
+      "month": "September/October"
+    },
+    {
+      "name": "Paro Tshechu",
+      "month": "March/April"
+    },
+    {
+      "name": "Punakha Drubchen",
+      "month": "February/March"
+    },
+    {
+      "name": "Wangdue Tshechu",
+      "month": "September/October"
+    }
+  ],
+  "cultural_etiquette": [
+    "Dress modestly in public",
+    "Remove shoes when entering homes and temples",
+    "Use both hands when giving or receiving items",
+    "Walk clockwise around religious monuments",
+    "Ask permission before photographing people"
+  ]
+}

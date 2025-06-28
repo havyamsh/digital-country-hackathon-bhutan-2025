@@ -1,0 +1,39 @@
+{
+  "job_applications": {
+    "requirements": [
+      "Bhutanese citizenship",
+      "Relevant educational qualifications",
+      "Age requirements as specified",
+      "Medical fitness certificate",
+      "Character clearance certificate"
+    ],
+    "process": [
+      "Check RCSC website for vacancies",
+      "Submit online application",
+      "Appear for written examination if required",
+      "Attend interview if shortlisted",
+      "Medical examination for selected candidates"
+    ],
+    "documents": [
+      "Citizenship ID copy",
+      "Educational certificates",
+      "Experience certificates",
+      "Medical certificate",
+      "Character clearance"
+    ]
+  },
+  "promotions": {
+    "criteria": [
+      "Minimum service period completion",
+      "Satisfactory performance records",
+      "Required training completion",
+      "No disciplinary actions"
+    ],
+    "process": [
+      "Automatic consideration based on eligibility",
+      "Performance evaluation",
+      "Interview if required",
+      "Approval by competent authority"
+    ]
+  }
+}

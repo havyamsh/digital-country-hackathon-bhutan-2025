@@ -1,0 +1,53 @@
+{
+  "income_tax": {
+    "rates": {
+      "individual": [
+        {
+          "range": "Up to Nu. 300,000",
+          "rate": "0%"
+        },
+        {
+          "range": "Nu. 300,001 - 400,000",
+          "rate": "5%"
+        },
+        {
+          "range": "Nu. 400,001 - 650,000",
+          "rate": "10%"
+        },
+        {
+          "range": "Nu. 650,001 - 1,000,000",
+          "rate": "15%"
+        },
+        {
+          "range": "Nu. 1,000,001 - 1,500,000",
+          "rate": "20%"
+        },
+        {
+          "range": "Above Nu. 1,500,000",
+          "rate": "25%"
+        }
+      ]
+    },
+    "filing": {
+      "deadline": "30th June of following year",
+      "required_documents": [
+        "Income statement",
+        "Tax computation",
+        "Supporting documents",
+        "Bank statements"
+      ]
+    }
+  },
+  "business_tax": {
+    "registration": [
+      "Business license from Economic Affairs",
+      "Tax registration with DRC",
+      "Sales tax registration if applicable"
+    ],
+    "obligations": [
+      "Monthly sales tax filing",
+      "Annual income tax filing",
+      "Maintain proper accounting records"
+    ]
+  }
+}

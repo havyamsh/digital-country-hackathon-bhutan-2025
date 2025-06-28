@@ -1,0 +1,11 @@
+flask==2.3.3
+requests==2.31.0
+python-dotenv==1.0.0
+langchain==0.0.327
+sentence-transformers==2.2.2
+faiss-cpu==1.7.4
+PyPDF2==3.0.1
+beautifulsoup4==4.12.2
+pandas==2.1.1
+numpy==1.24.3
+flask-cors==4.0.0
